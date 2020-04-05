@@ -73,31 +73,14 @@ module.exports = {
   },
 
   commandCommand: function() {
-    let text = "";
-    let cmds = [
-      "/help : bantuan game",
-      "/about : tentang bot",
-      "/info : list role",
-      "/me : statistik user",
-      "/rank : cek rank"
-    ];
-
-    cmds.forEach((item, index) => {
-      text += "- " + item;
-      if (index !== cmds.length - 1) {
-        text += "\n";
-      }
-    });
-
-    let flex_text = {
-      header: {
-        text: "📚 Daftar Perintah"
-      },
-      body: {
-        text: text
-      }
-    };
-    return this.replyFlex(flex_text);
+    const rataratasnmFlex = require("/app/message/helpother");
+    return rataratasnmFlex.receive(
+      this.client,
+      this.event,
+      this.args,
+      this.user_session,
+      this.group_session
+    );
   },
 
   invalidCommand: function() {

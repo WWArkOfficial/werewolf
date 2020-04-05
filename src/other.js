@@ -33,7 +33,7 @@ module.exports = {
   followResponse: function() {
     let flex_text = {
       header: {
-        text: "👋 Haiii"
+        text: "👋 Hai"
       },
       body: {
         text:
