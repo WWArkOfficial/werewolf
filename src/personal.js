@@ -23,7 +23,7 @@ module.exports = {
     }
 
     switch (this.args[0]) {
-      case "/role":
+      case "/mr":
         return this.roleCommand();
       case "/announce":
       case "/news":
@@ -766,49 +766,25 @@ module.exports = {
   },
 
   helpCommand: function() {
-    const helpFlex = require("/app/message/help");
-    let state = this.group_session.state;
-    let help = helpFlex.getHelp(state);
-
-    let flex_text = {
-      header: {
-        text: help.headerText
-      },
-      body: {
-        text: help.bodyText
-      }
-    };
-
-    return this.replyFlex(flex_text);
+    const rataratasnmFlex = require("/app/message/helppersonal");
+    return rataratasnmFlex.receive(
+      this.client,
+      this.event,
+      this.args,
+      this.user_session,
+      this.group_session
+    );
   },
 
   commandCommand: function() {
-    let text = "";
-    let cmds = [
-      "/news : cek berita (malam dibunuh siapa, dll)",
-      "/role : cek role",
-      "/info : list role",
-      "/help : bantuan game",
-      "/journal : cek journal kamu",
-      "/revoke: untuk batal menggunakan skill"
-    ];
-
-    cmds.forEach((item, index) => {
-      text += "- " + item;
-      if (index !== cmds.length - 1) {
-        text += "\n";
-      }
-    });
-
-    let flex_text = {
-      header: {
-        text: "📚 Daftar Perintah"
-      },
-      body: {
-        text: text
-      }
-    };
-    return this.replyFlex(flex_text);
+    const rataratasnmFlex = require("/app/message/helppersonal");
+    return rataratasnmFlex.receive(
+      this.client,
+      this.event,
+      this.args,
+      this.user_session,
+      this.group_session
+    );
   },
 
   /** helper func **/
