@@ -17,9 +17,9 @@ module.exports = {
         return this.commandCommand();
       case "/about":
         return this.aboutCommand();
-      case "/role":
-      case "/roles":
-        return this.infoCommand();
+      case "/role1":
+      case "/roles1":
+        return this.info1Command();
       case "/rank":
       case "/me":
       case "/status":
@@ -67,8 +67,8 @@ module.exports = {
     return this.replyFlex(flex_text);
   },
 
-  infoCommand: function() {
-    const rataratasnmFlex = require("/app/message/roles");
+  info1Command: function() {
+    const rataratasnmFlex = require("/app/message/roles1");
     return rataratasnmFlex.receive(
       this.client,
       this.event,
