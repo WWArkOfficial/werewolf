@@ -20,6 +20,9 @@ module.exports = {
       case "/role1":
       case "/roles1":
         return this.info1Command();
+      case "/role2":
+      case "/roles2":
+        return this.info2Command();
       case "/rank":
       case "/me":
       case "/status":
@@ -69,6 +72,17 @@ module.exports = {
 
   info1Command: function() {
     const rataratasnmFlex = require("/app/message/roles1");
+    return rataratasnmFlex.receive(
+      this.client,
+      this.event,
+      this.args,
+      this.user_session,
+      this.group_session
+    );
+  },
+
+  info2Command: function() {
+    const rataratasnmFlex = require("/app/message/roles2");
     return rataratasnmFlex.receive(
       this.client,
       this.event,
