@@ -207,7 +207,7 @@ module.exports = {
   },
 
   helpCommand: function() {
-    const rataratasnmFlex = require("/app/message/help");
+    const rataratasnmFlex = require("/app/message/helps");
     return rataratasnmFlex.receive(
       this.client,
       this.event,
@@ -2691,7 +2691,7 @@ module.exports = {
   },
 
   commandCommand: function() {
-    const rataratasnmFlex = require("/app/message/help");
+    const rataratasnmFlex = require("/app/message/helps");
     return rataratasnmFlex.receive(
       this.client,
       this.event,
