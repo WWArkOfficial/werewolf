@@ -102,10 +102,13 @@ module.exports = {
         return this.statCommand();
       case "/info":
         return this.infoCommand();
-      case "/roles":
-      case "/rolelist":
-        return this.roleListCommand();
-      case "/role":
+      case "/role1":
+      case "/roles1":
+        return this.info1Command();
+      case "/role2":
+      case "/roles2":
+        return this.info2Command();
+      case "/mr":
       case "/news":
         return this.personalCommand();
       case "/skip":
@@ -166,33 +169,26 @@ module.exports = {
     return this.replyText(remind);
   },
 
-  roleListCommand: function() {
-    if (this.group_session.state === "idle") {
-      return this.replyText("💡 Belum ada game yang dibuat, ketik '/new'");
-    } else if (this.group_session.state === "new") {
-      return this.replyText("💡 Game belum dimulai");
-    }
+  info1Command: function() {
+    const rataratasnmFlex = require("/app/message/roles1");
+    return rataratasnmFlex.receive(
+      this.client,
+      this.event,
+      this.args,
+      this.user_session,
+      this.group_session
+    );
+  },
 
-    let playersCount = this.group_session.players.length;
-
-    if (playersCount < 7) {
-      let text =
-        "💡 Roles yang ada tidak di beritahu pada room dengan jumlah " +
-        playersCount +
-        " pemain";
-      return this.replyText(text);
-    }
-
-    let roles = this.group_session.roles;
-    let flex_text = {
-      header: {
-        text: "🐺 Role List 🔮"
-      },
-      body: {
-        text: roles.join(", ")
-      }
-    };
-    return this.replyFlex(flex_text);
+  info2Command: function() {
+    const rataratasnmFlex = require("/app/message/roles2");
+    return rataratasnmFlex.receive(
+      this.client,
+      this.event,
+      this.args,
+      this.user_session,
+      this.group_session
+    );
   },
 
   personalCommand: function() {
