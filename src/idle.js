@@ -90,20 +90,14 @@ module.exports = {
   },
 
   helpCommand: function() {
-    const helpFlex = require("/app/message/help");
-    let state = null;
-    let help = helpFlex.getHelp(state);
-
-    let flex_text = {
-      header: {
-        text: help.headerText
-      },
-      body: {
-        text: help.bodyText
-      }
-    };
-
-    return this.replyFlex(flex_text);
+    const rataratasnmFlex = require("/app/message/helpother");
+    return rataratasnmFlex.receive(
+      this.client,
+      this.event,
+      this.args,
+      this.user_session,
+      this.group_session
+    );
   },
 
   /** message func **/
