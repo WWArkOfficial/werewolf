@@ -47,9 +47,9 @@ module.exports = {
         from: "00:00:00",
         to: "03:59:59",
         color: {
-          main: "#202b58",
-          secondary: "#202b58",
-          background: "#121212",
+          main: "#6e1313",
+          secondary: "#6e1313",
+          background: "#136e62",
           text: "#ffffff"
         }
       },
@@ -57,39 +57,39 @@ module.exports = {
         from: "04:00:00",
         to: "08:59:59",
         color: {
-          main: "#5aa2e0",
-          secondary: "#5aa2e0",
-          background: "#ffffff",
-          text: "#000000"
+          main: "#6e1313",
+          secondary: "#6e1313",
+          background: "#136e62",
+          text: "#ffffff"
         }
       },
       noon: {
         from: "09:00:00",
         to: "14:59:59",
         color: {
-          main: "#f8aa27",
-          secondary: "#f8aa27",
-          background: "#ffffff",
-          text: "#263646"
+          main: "#6e1313",
+          secondary: "#6e1313",
+          background: "#136e62",
+          text: "#ffffff"
         }
       },
       evening: {
         from: "15:00:00",
         to: "18:29:59",
         color: {
-          main: "#f46a4e",
-          secondary: "#f46a4e",
-          background: "#ffffff",
-          text: "#000000"
+          main: "#6e1313",
+          secondary: "#6e1313",
+          background: "#136e62",
+          text: "#ffffff"
         }
       },
       night: {
         from: "18:30:00",
         to: "23:59:59",
         color: {
-          main: "#004751",
-          secondary: "#004751",
-          background: "#272727",
+          main: "#6e1313",
+          secondary: "#6e1313",
+          background: "#136e62",
           text: "#ffffff"
         }
       }
