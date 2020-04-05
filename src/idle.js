@@ -17,8 +17,8 @@ module.exports = {
         return this.commandCommand();
       case "/about":
         return this.aboutCommand();
-      case "/info":
-      case "/rolelist":
+      case "/role":
+      case "/roles":
         return this.infoCommand();
       case "/rank":
       case "/me":
@@ -27,7 +27,7 @@ module.exports = {
       case "/stats":
       case "/reset":
         return this.statCommand();
-      case "/role":
+      case "/mr":
       case "/news":
       case "/jurnal":
       case "/r":
@@ -68,8 +68,14 @@ module.exports = {
   },
 
   infoCommand: function() {
-    const roles = require("/app/roles/rolesInfo");
-    return roles.receive(this.client, this.event, this.args);
+    const rataratasnmFlex = require("/app/message/roles");
+    return rataratasnmFlex.receive(
+      this.client,
+      this.event,
+      this.args,
+      this.user_session,
+      this.group_session
+    );
   },
 
   commandCommand: function() {
