@@ -2369,7 +2369,7 @@ module.exports = {
           {
             action: "uri",
             label: "✉️ News",
-            data: "line://oaMessage/" + process.env.BOT_ID + "/?/news"
+            data: "line://oaMessage/@786pweuq/?/news"
           },
           {
             action: "postback",
@@ -3031,7 +3031,7 @@ module.exports = {
           {
             action: "uri",
             label: "💡 Role",
-            data: "line://oaMessage/" + process.env.BOT_ID + "/?/role"
+            data: "line://oaMessage/@786pweuq/?/role"
           },
           {
             action: "postback",
@@ -3062,7 +3062,7 @@ module.exports = {
           {
             action: "uri",
             label: "✉️ Cek berita",
-            data: "line://oaMessage/" + process.env.BOT_ID + "/?/news"
+            data: "line://oaMessage/@786pweuq/?/news"
           },
           {
             action: "postback",

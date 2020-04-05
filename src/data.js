@@ -215,7 +215,7 @@ module.exports = {
         text += "💡 " + profile.displayName;
       }
       text += " gagal bergabung kedalam game, add dulu botnya" + "\n";
-      text += "https://line.me/ti/p/" + process.env.BOT_ID;
+      text += "https://line.me/ti/p/@786pweuq";
       return this.replyText(text);
     } catch (err) {
       console.log("notAddError error", err.originalError.response.data);
