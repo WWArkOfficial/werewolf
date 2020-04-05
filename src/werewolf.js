@@ -90,6 +90,8 @@ module.exports = {
       case "/c":
       case "/cok":
         return this.checkCommand();
+      case "/tutorial":
+        return this.tutorialCommand();
       case "/vote":
         return this.voteCommand();
       case "/about":
@@ -200,6 +202,17 @@ module.exports = {
   infoCommand: function() {
     const roles = require("/app/roles/rolesInfo");
     return roles.receive(this.client, this.event, this.args);
+  },
+
+  tutorialCommand: function() {
+    const rataratasnmFlex = require("/app/message/tutorial");
+    return rataratasnmFlex.receive(
+      this.client,
+      this.event,
+      this.args,
+      this.user_session,
+      this.group_session
+    );
   },
 
   helpCommand: function() {
