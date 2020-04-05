@@ -49,8 +49,8 @@ module.exports = {
         color: {
           main: "#6e1313",
           secondary: "#6e1313",
-          background: "#136e62",
-          text: "#ffffff"
+          background: "#ffffff",
+          text: "#000000"
         }
       },
       morning: {
@@ -59,8 +59,8 @@ module.exports = {
         color: {
           main: "#6e1313",
           secondary: "#6e1313",
-          background: "#136e62",
-          text: "#ffffff"
+          background: "#ffffff",
+          text: "#000000"
         }
       },
       noon: {
@@ -69,8 +69,8 @@ module.exports = {
         color: {
           main: "#6e1313",
           secondary: "#6e1313",
-          background: "#136e62",
-          text: "#ffffff"
+          background: "#ffffff",
+          text: "#000000"
         }
       },
       evening: {
@@ -79,8 +79,8 @@ module.exports = {
         color: {
           main: "#6e1313",
           secondary: "#6e1313",
-          background: "#136e62",
-          text: "#ffffff"
+          background: "#ffffff",
+          text: "#000000"
         }
       },
       night: {
@@ -89,8 +89,8 @@ module.exports = {
         color: {
           main: "#6e1313",
           secondary: "#6e1313",
-          background: "#136e62",
-          text: "#ffffff"
+          background: "#ffffff",
+          text: "#000000"
         }
       }
     };
