@@ -734,7 +734,7 @@ module.exports = {
     }
 
     announcement +=
-      "💡 Jangan lupa ketik '/role' di pc bot untuk menggunakan skill" + "\n\n";
+      "💡 Jangan lupa ketik '/mr' di pc bot untuk menggunakan skill" + "\n\n";
 
     if (this.group_session.nightCounter === 1) {
       const firstDayNaration = require("/app/message/firstDay");
