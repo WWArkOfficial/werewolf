@@ -207,20 +207,14 @@ module.exports = {
   },
 
   helpCommand: function() {
-    const helpFlex = require("/app/message/help");
-    let state = this.group_session.state;
-    let help = helpFlex.getHelp(state);
-
-    let flex_text = {
-      header: {
-        text: help.headerText
-      },
-      body: {
-        text: help.bodyText
-      }
-    };
-
-    return this.replyFlex(flex_text);
+    const rataratasnmFlex = require("/app/message/help");
+    return rataratasnmFlex.receive(
+      this.client,
+      this.event,
+      this.args,
+      this.user_session,
+      this.group_session
+    );
   },
 
   statCommand: function() {
@@ -235,21 +229,14 @@ module.exports = {
   },
 
   aboutCommand: function() {
-    let text = "Bot semi automatic yang ada campuran elemen dari ";
-    text += "Town Of Salem. ";
-    text +=
-      "Thanks buat grup Avalon City, LOW, Where Wolf(?), Random, RND Twins dan semua adders!" +
-      "\n";
-    text += "- Eriec (creator)";
-    let flex_text = {
-      header: {
-        text: "🐺 Werewolf 👨‍🌾"
-      },
-      body: {
-        text: text
-      }
-    };
-    return this.replyFlex(flex_text);
+    const rataratasnmFlex = require("/app/message/about");
+    return rataratasnmFlex.receive(
+      this.client,
+      this.event,
+      this.args,
+      this.user_session,
+      this.group_session
+    );
   },
 
   revokeCommand: function() {
@@ -2704,36 +2691,14 @@ module.exports = {
   },
 
   commandCommand: function() {
-    let text = "";
-    let cmds = [
-      "/new : main game",
-      "/cancel : keluar game",
-      "/join : join game",
-      "/players : cek list pemain",
-      "/stop : stop game",
-      "/start : start game",
-      "/stats : cek statistik user",
-      "/rank : cek rank",
-      "/info : tampilin list role",
-      "/about : tentang bot",
-      "/revoke : untuk batal voting",
-      "/extend : untuk menambah 1 menit saat baru membuat room game",
-      "/kick : untuk mengeluarkan bot dari group/room chat"
-    ];
-
-    cmds.forEach((item, index) => {
-      text += "- " + item + "\n";
-    });
-
-    let flex_text = {
-      header: {
-        text: "📚 Daftar Perintah"
-      },
-      body: {
-        text: text
-      }
-    };
-    return this.replyFlex(flex_text);
+    const rataratasnmFlex = require("/app/message/help");
+    return rataratasnmFlex.receive(
+      this.client,
+      this.event,
+      this.args,
+      this.user_session,
+      this.group_session
+    );
   },
 
   invalidCommand: function() {
