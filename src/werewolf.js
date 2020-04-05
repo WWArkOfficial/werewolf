@@ -3044,7 +3044,7 @@ module.exports = {
           {
             action: "uri",
             label: "💡 Role",
-            data: "line://oaMessage/@786pweuq/?/role"
+            data: "line://oaMessage/@786pweuq/?/mr"
           },
           {
             action: "postback",
